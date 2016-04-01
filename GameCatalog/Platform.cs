@@ -8,6 +8,6 @@ namespace GameCatalog
 {
     public enum Platform
     {
-        All, Android, PC, Xbox, Playstation, IOS
+        Android, PC, Xbox, Playstation, IOS
     }
 }

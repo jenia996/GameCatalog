@@ -16,7 +16,5 @@ namespace GameCatalog
         public string image { get; set; }
         public string description { get; set; }
         public Platform platform { get; set; }
-
-
     }
 }

@@ -20,7 +20,8 @@ namespace GameCatalog
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Game> initialize()
+        public UserSettings userSettings;
+        private List<Game> initialize()//Requset to db with settings
         {
             List<Game> games = new List<Game>();
             games.Add(new Game() { id = 1, name = "Mass Effect", description = "Some Description", averageMark = 9.5, image = @"..\..\Data\Mass Effect.jpg", dateAdded = DateTime.Now.ToString("yyyy/MM/dd"), genre = Genre.RPG });
@@ -30,6 +31,7 @@ namespace GameCatalog
         public MainWindow()
         {
             InitializeComponent();
+            userSettings = UserSettings.Instance;
             dataGrid.ItemsSource = initialize();
         }
 
@@ -44,6 +46,13 @@ namespace GameCatalog
                 image.Source = imageSource;
             }
             description.Content = game.description;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            userSettings = UserSettings.Instance;
+            var settings = new Settings(userSettings) { Owner = this };
+            settings.ShowDialog();
         }
     }
 }

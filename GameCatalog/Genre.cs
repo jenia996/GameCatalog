@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameCatalog
 {
-    enum Genre
+    public enum Genre
     {
         Action, Adventure, Card, Logic, RPG, Strategy
     }
