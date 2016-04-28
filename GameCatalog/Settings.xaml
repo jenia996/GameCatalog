@@ -12,9 +12,8 @@
 " HorizontalAlignment="Left" Margin="129,10,0,0" VerticalAlignment="Top"/>
         <Button x:Name="canselBtn" Content="Cancel" HorizontalAlignment="Left" Margin="209,243,0,0" VerticalAlignment="Top" Width="75" Click="canselBtn_Click"/>
         <Button x:Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="129,243,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.17,0.512" Click="saveBtn_Click"/>
+        
         <CheckBox x:Name="platformPC" Content="PC" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" />
-
-
         <CheckBox x:Name="platformPlayStation" Content="PlayStation" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="platformXbox" Content="Xbox" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="platformAndroid" Content="Android" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top"/>
@@ -24,7 +23,7 @@
         <CheckBox x:Name="genreCard" Content="Card" HorizontalAlignment="Left" Margin="129,81,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="genreLogic" Content="Logic" HorizontalAlignment="Left" Margin="129,101,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="genreRPG" Content="RPG" HorizontalAlignment="Left" Margin="129,121,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="genreStrategy" Content="Strategy" HorizontalAlignment="Left" Margin="129,141,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="genreStrategy" Content="Strategy" HorizontalAlignment="Left" Margin="129,141,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="markBox" HorizontalAlignment="Left" Height="23" Margin="106,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label" Content="Minimum Mark" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top"/>
 

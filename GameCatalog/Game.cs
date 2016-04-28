@@ -15,6 +15,19 @@ namespace GameCatalog
         public string dateAdded { get; set; }
         public string image { get; set; }
         public string description { get; set; }
-        public Platform platform { get; set; }
+        public List<Platform> platforms { get; set; }
+        public List<string> comments { get; set; }
+        public Game()
+        {
+            platforms = new List<Platform>();
+            comments = new List<string>();
+        }
+        public String Platforms
+        {
+            get
+            {
+                return String.Join(", ", platforms);
+            }
+        }
     }
 }

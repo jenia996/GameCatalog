@@ -25,13 +25,16 @@ namespace GameCatalog
         {
             List<Game> games = new List<Game>();
             games.Add(new Game() { id = 1, name = "Mass Effect", description = "Some Description", averageMark = 9.5, image = @"..\..\Data\Mass Effect.jpg", dateAdded = DateTime.Now.ToString("yyyy/MM/dd"), genre = Genre.RPG });
+            games.Last().platforms.Add(Platform.Android);
+            games.Last().platforms.Add(Platform.IOS);
+
             games.Add(new Game() { id = 2, name = "Mass effect 2", dateAdded = DateTime.Now.ToString("yyyy/MM/dd"), genre = Genre.Action, averageMark = 9.1, image = @"..\..\Data\Mass Effect 2.jpg" });
             return games;
         }
         public MainWindow()
         {
             InitializeComponent();
-            userSettings = UserSettings.Instance;
+            userSettings = UserSettingsParser.getUserSettings();
             dataGrid.ItemsSource = initialize();
         }
 
@@ -50,9 +53,9 @@ namespace GameCatalog
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            userSettings = UserSettings.Instance;
             var settings = new Settings(userSettings) { Owner = this };
             settings.ShowDialog();
         }
+
     }
 }

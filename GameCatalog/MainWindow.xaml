@@ -35,7 +35,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Platform" Width="140" Binding="{Binding platform}"  IsReadOnly="True">
+                <DataGridTextColumn Header="Platform" Width="140" Binding="{Binding Platforms}"  IsReadOnly="True">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextWrapping" Value="Wrap"/>
