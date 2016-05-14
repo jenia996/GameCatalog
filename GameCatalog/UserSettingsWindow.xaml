@@ -1,0 +1,33 @@
+﻿<Window x:Name="window" x:Class="GameCatalog.UserSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameCatalog"
+        mc:Ignorable="d"
+        Title="Settings" Height="300" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="platform" Content="Platform" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Genre" Content="Genre
+" HorizontalAlignment="Left" Margin="129,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="canselBtn" Content="Cancel" HorizontalAlignment="Left" Margin="209,243,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="129,243,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.17,0.512" Command="{Binding Commands.DialogResultCommand, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserSettingsWindow}}}" CommandParameter="{Binding Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserSettingsWindow}}}"/>
+
+        <CheckBox x:Name="platformPC" Content="PC" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedPlatforms.pc, ElementName=window, Mode=TwoWay}" />
+        <CheckBox x:Name="platformPlayStation" Content="PlayStation" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedPlatforms.playstation, ElementName=window, Mode=TwoWay}"/>
+        <CheckBox x:Name="platformXbox" Content="Xbox" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedPlatforms.xbox, ElementName=window, Mode=TwoWay}"/>
+        <CheckBox x:Name="platformAndroid" Content="Android" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedPlatforms.android, ElementName=window, Mode=TwoWay}"/>
+        <CheckBox x:Name="platformIOS" Content="IOS" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedPlatforms.ios, ElementName=window, Mode=TwoWay}"/>
+        <CheckBox x:Name="genreAction" Content="Action" HorizontalAlignment="Left" Margin="129,41,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedGenres.action, ElementName=window,Mode=TwoWay}"/>
+        <CheckBox x:Name="genreAdventure" Content="Adventure" HorizontalAlignment="Left" Margin="129,61,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedGenres.adventure, ElementName=window,Mode=TwoWay}"/>
+        <CheckBox x:Name="genreCard" Content="Card" HorizontalAlignment="Left" Margin="129,81,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedGenres.card, ElementName=window,Mode=TwoWay}"/>
+        <CheckBox x:Name="genreLogic" Content="Logic" HorizontalAlignment="Left" Margin="129,101,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedGenres.logic, ElementName=window,Mode=TwoWay}"/>
+        <CheckBox x:Name="genreRPG" Content="RPG" HorizontalAlignment="Left" Margin="129,121,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedGenres.rpg, ElementName=window,Mode=TwoWay}"/>
+        <CheckBox x:Name="genreStrategy" Content="Strategy" HorizontalAlignment="Left" Margin="129,141,0,0" VerticalAlignment="Top" IsChecked="{Binding USettings.preferedGenres.strategy, ElementName=window,Mode=TwoWay}"/>
+        <TextBox x:Name="markBox" HorizontalAlignment="Left" Height="23" Margin="106,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding MinMark, Mode=TwoWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserSettingsWindow}}}"  />
+        <Label x:Name="label" Content="Minimum Mark" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" />
+
+
+
+    </Grid>
+</Window>
