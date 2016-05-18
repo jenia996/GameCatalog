@@ -9,17 +9,11 @@ namespace GameCatalog
     class GameService
     {
         GameRepository repository;
-        public static MainWindow mainWindow;
-        public static void setWindow(MainWindow window)
-        {
-            mainWindow = window;
-        }
         public static void findGames(Game name)
         {
 
            // String temp = (String)name;
             List<Game> games = new List<Game>() { new Game() { name = "Mass effect" } };
-            mainWindow.dataGrid.ItemsSource = games;
         }
         public GameService()
         {

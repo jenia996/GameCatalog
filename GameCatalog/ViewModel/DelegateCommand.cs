@@ -3,10 +3,11 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace GameCatalog
+namespace GameCatalog.ViewModel
 {
     public class DelegateCommand<T> : ICommand
     {
+
         private readonly Predicate<T> _canExecute;
         private readonly Action<T> _execute;
 
